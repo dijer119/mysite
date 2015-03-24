@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'polls',
     'lifelog',
     'rango',
+    'bstr'
 )
 
 MIDDLEWARE_CLASSES = (
