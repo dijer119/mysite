@@ -6,6 +6,9 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'lifelog/index.html')
 
+def food_log_index(request):
+    return render(request, 'lifelog/food_log_index.html')
+
 def intro(request):
     # return HttpResponse("Rango says here is the about page. </br>  <a href='/rango/'>Index</a>")
     return render(request, 'lifelog/intro.html')
