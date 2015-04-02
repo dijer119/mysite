@@ -1,0 +1,17 @@
+{% extends 'lifelog/base.html' %}
+{% block body_block %}
+    <form role="form"  id="regist_form" method="post" action="/lifelog/regist">
+        {% csrf_token %}
+        {% for hidden in log.hidden_fields %}
+                {{ hidden }}
+        {% endfor %}
+
+        {% for field in log.visible_fields %}
+            {{ field.errors }}
+            {{ field.help_text }}
+            {{ field }}
+        {% endfor %}
+    <button class="btn btn-primary" type="submit" name="submit">등 록</button>
+    </form>
+
+{% endblock %}

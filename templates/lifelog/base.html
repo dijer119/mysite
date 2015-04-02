@@ -12,9 +12,12 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap-theme.min.css" %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{% static "css/navbar.css" %}" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
 
   </head>
 
@@ -30,13 +33,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Life Log</a>
+          <a class="navbar-brand" href="/lifelog">Life Log</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
-            <li><a href="#">Link</a></li>
+            <li><a href="/lifelog/food">Food Log</a></li>
+            <li><a href="/lifelog/">dd</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -59,17 +62,13 @@
       </div>
 
       <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        {% block body_block %}{% endblock %}
-      </div>
-
+      {% block body_block %}{% endblock %}
     </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
+
   </body>
 </html>

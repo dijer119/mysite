@@ -1,8 +1,27 @@
 {% extends 'lifelog/base.html' %}
 {% block body_block %}
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar">View navbar docs &raquo;</a>
-        </p>
+
+    <p>
+        <button type="button" id="regBtn" class="btn bn-lg btn-primar">등록하기</button>
+    </p>
+
+    <div class="jumbotron">
+        {% if logs %}
+            <ul>
+                {% for log in logs %}
+                <li>{{ log.text }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no log present.</strong>
+        {% endif %}
+    </div>
+
+    <script>
+    $(document).ready( function() {
+        $("#regBtn").click( function(event) {
+            alert("You clicked the button using JQuery!");
+        });
+    });
+    </script>
 {% endblock %}
