@@ -38,8 +38,8 @@ INSTALLED_APPS = (
     'polls',
     'lifelog',
     'rango',
-    'bstr',
-    'thaipho'
+    # 'bstr',
+    'thaipho',
 )
 
 MIDDLEWARE_CLASSES = (
