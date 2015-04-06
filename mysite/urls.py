@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^rango/', include('rango.urls')),
     url(r'^lifelog/', include('lifelog.urls')),
     url(r'^thaipho/', include('thaipho.urls')),
-    url(r'^$', 'thaipho.views.index', name='thaipho_home'),
+    url(r'^$', 'thaipho.views.index2', name='thaipho_home'),
 )
 
 if settings.DEBUG:
