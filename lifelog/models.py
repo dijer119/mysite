@@ -18,11 +18,11 @@ class Code(models.Model):
         return self.code_name
 
 class Log(models.Model):
-    create_date = models.DateTimeField('Create Date')
-    update_date = models.DateTimeField('Update Date')
+    create_date = models.DateTimeField(auto_now_add=True)
+    update_date = models.DateTimeField(auto_now_add=True)
 
     #실제 log 발생한 일시
-    log_date = models.DateTimeField('Event Date')
+    log_date = models.CharField(max_length=20)
 
     #log type, 약, 운동, 먹는거 등등.
     type = models.ForeignKey(Code)
