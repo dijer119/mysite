@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'rango',
     # 'bstr',
     'thaipho',
-    'bootstrap3'
+    # 'bootstrap3'
 )
 
 MIDDLEWARE_CLASSES = (
